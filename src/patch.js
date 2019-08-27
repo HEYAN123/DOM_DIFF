@@ -4,10 +4,7 @@ let allPatches;
 let index = 0;
 function patch(tree, patches) {
     allPatches = patches;
-
-
     walk(tree);
-
 };
 
 function walk(node) {

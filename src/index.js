@@ -21,7 +21,8 @@ let virtualDOM2 = createElement(
     },
     [
         createElement('li', { class: 'item'}, ['1']),
-        createElement('div', { class: 'item'}, ['b'])
+        createElement('div', { class: 'item'}, ['b']) // 更换
+        // 删除
     ]
 );
 
@@ -30,5 +31,9 @@ renderDom(realDOM, window.root);
 
 // diff比较得出补丁
 let patches = diff(virtualDOM1, virtualDOM2);
+console.log('patches', patches);
 // 给DOM树打补丁
 patch(realDOM, patches);
+
+
+// 新增，交换
